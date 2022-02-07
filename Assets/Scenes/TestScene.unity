@@ -408,6 +408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1459670436319183659, guid: f9fd6bcefbd37a542853aaccbaf3c9ed, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 7324025454460908384, guid: f9fd6bcefbd37a542853aaccbaf3c9ed, type: 3}
       propertyPath: m_RootOrder
       value: 3
