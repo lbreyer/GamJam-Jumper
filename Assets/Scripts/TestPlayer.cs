@@ -11,13 +11,13 @@ public class TestPlayer : MonoBehaviour
 
     private float direction = 1;
     private Rigidbody2D rb2D;
+    private bool jumpReady = true;
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         Vector2 movement = new Vector2(1, 0) * speed * direction;
         rb2D.velocity = movement;
-
     }
 
     void Update()
@@ -25,9 +25,10 @@ public class TestPlayer : MonoBehaviour
         Vector2 movement = new Vector2(1, 0) * speed * direction;
         movement.y = rb2D.velocity.y;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && jumpReady)
         {
             movement.y = jumpForce;
+            jumpReady = false;
         }
 
         rb2D.velocity = movement;
@@ -39,6 +40,10 @@ public class TestPlayer : MonoBehaviour
         {
             direction *= -1;
             //rb2D.velocity *= direction;
+        }
+        else if (collision.gameObject.CompareTag("Floor"))
+        {
+            jumpReady = true;
         }
     }
 }
