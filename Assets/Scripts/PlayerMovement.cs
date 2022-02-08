@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite[] side;
     int frameIndex = 0;
     float frameTimer;
-    public float fps = 5;
+    public float fps = 10;
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2(1, 0) * speed * direction;
         movement.y = rb2D.velocity.y;
         frameTimer -= Time.deltaTime;
-        if(frameTimer >= 0)
+        if(frameTimer <= 0)
         {
             if(frameIndex >= 3)
             {
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
             sr.sprite = side[frameIndex];
-            frameTimer = 0.5f;
+            frameTimer = (0.5f / fps);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
