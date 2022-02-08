@@ -50,6 +50,7 @@ public class TestPlayer : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -65,6 +66,10 @@ public class TestPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Coin"))
         {
             collision.gameObject.GetComponent<Coin>().Collect();
+        }
+        else if (collision.gameObject.CompareTag("Portal"))
+        {
+            collision.gameObject.GetComponent<ExitPortal>().teleport();
         }
     }
 }

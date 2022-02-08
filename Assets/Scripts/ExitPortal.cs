@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitPortal : MonoBehaviour
 {
@@ -10,14 +11,19 @@ public class ExitPortal : MonoBehaviour
     public string NextLevel;
 
     private int CollectedCoins;
+    private bool active;
 
     void Start()
     {
-        
+        active = false;
     }
 
-    void Update()
+    public void teleport() 
     {
+        if (active) 
+        {
+            SceneManager.LoadScene(NextLevel);
+        }
         
     }
 
@@ -26,7 +32,7 @@ public class ExitPortal : MonoBehaviour
         CollectedCoins++;
         if (CollectedCoins == CoinsRequired)
         {
-            // Set the portal sprite to open
+            active = true;
         }
     }
 }
