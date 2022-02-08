@@ -204,9 +204,41 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2193290440109322417, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_Size.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193290440109322417, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193290440109322417, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4181270121271209018, guid: da15fe1ee0b6f424eb5ff0984a1c75eb, type: 3}
+    - target: {fileID: 2193290440109322417, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3017899291671918274, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
       propertyPath: m_GravityScale
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334903796975883666, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334903796975883666, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334903796975883666, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.0666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334903796975883666, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.4222223
       objectReference: {fileID: 0}
     - target: {fileID: 6884913483652836307, guid: 1910c2c6ba3006b498c6ffff77941668, type: 3}
       propertyPath: speed
