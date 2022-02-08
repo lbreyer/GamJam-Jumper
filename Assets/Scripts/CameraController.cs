@@ -14,12 +14,11 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y - offsetY <= player.position.y)
+        if (transform.position.y + offsetY >= player.position.y)
         {
             Vector3 pos = transform.position;
-            pos.y = player.position.x + offsetY;
+            pos.y = player.position.y + offsetY;
             transform.position = pos;
-
         }
     }
 }
