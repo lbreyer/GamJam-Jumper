@@ -6,6 +6,8 @@ public class ExitPortal : MonoBehaviour
 {
     [Tooltip("Coins to open the portal")]
     public int CoinsRequired;
+    [Tooltip("Next Level Name")]
+    public string NextLevel;
 
     private int CollectedCoins;
 
